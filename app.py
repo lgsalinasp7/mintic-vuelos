@@ -49,8 +49,6 @@ def indexr():
 
     return render("/index.html")
 
-
-
 @app.route("/usuario/<id_usuario>", methods=["GET","POST"])
 def usuario(id_usuario):
     if id_usuario in Lista_usuarios:
@@ -60,33 +58,28 @@ def usuario(id_usuario):
 
        return f"Error El Usuario:{id_usuario} no existe"
 
-@app.route("/crear_cita_medico", methods=["GET", "POST"])
-def crear_cita_medico():
-    return "pagina crear_cita_medico"
+@app.route("/crear_vuelos", methods=["GET", "POST"])
+def crear_vuelos():
+    return "pagina crear Vuelos"
 
 
-@app.route("/crear_observacion_medico", methods=["GET", "POST"])
-def crear_ob_medico():
-    return "pagina crear_observacion_medico"
-
-
-@app.route("/cita/<id_cita>", methods=["GET" ])
-def cita_usuario(id_cita):
+@app.route("/vuelos/<id_vuelo>", methods=["GET" ])
+def vuelos(id_vuelo):
     try:
-        id_cita=int(id_cita)
+        id_vuelo=int(id_vuelo)
     except Exception as e:
-        id_cita = 0     
-    if id_cita in citas_medicas:
+        id_vuelo = 0     
+    if id_vuelo in vuelos:
     
-       return f"Estas viendo la cita:{id_cita}"
+       return f"Estas viendo El Vuelo:{id_vuelo}"
     else:
 
-       return f"Error La cita:{id_cita} no existe" 
+       return f"Error de Vuelo:{id_vuelo} no existe" 
     return "Solicitar_cita_usuario: {id_cita}"
 
-@app.route("/calificar_atencion", methods=["GET", "POST"])
-def calificar_atencion():
-    return "pagina calificar_atencion"
+@app.route("/calificar_vuelo", methods=["GET", "POST"])
+def calificar_vuelo():
+    return "pagina calificar  Vuelo"
 
 if __name__=="__main__":
     app.run(debug=True)
