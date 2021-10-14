@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clinica del Caribe</title>
+<link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+</head>
+<body>
+	<div class="container">
+		<div class="navigation">
+			<ul>
+				<li>
+					<a href="#">
+						<img class="img-ppal" src="/static/img/logo_clinicadelcaribe.png" alt="Logo">
+						<!-- <span class="title" style="font-size: 1.0em;font-weight: 500;">Clinica del Caribe</span> -->
+					</a>
+				</li>
+				<li class="hovered">
+					<a href="#">
+						<span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+						<span class="title">Perfil de Usuario</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+						<span class="title">Usuarios</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"><ion-icon name="medkit-outline"></ion-icon></span>
+						<span class="title">Medicos</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+						<span class="title">Citas</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"><ion-icon name="chatbox-ellipses-outline"></ion-icon></span>
+						<span class="title">Comentarios</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+						<span class="title">Contraseña</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+						<span class="title">Salir</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- main -->
+		<div class="main">
+			<div class="topbar">
+				<div class="toggle">
+					<ion-icon name="menu-outline"></ion-icon>
+				</div>
+				<!-- search -->
+				<div class="search">
+					<label>
+						<input type="text" placeholder="Buscar Citas del Dia">
+						<ion-icon name="search-outline"></ion-icon>
+					</label>
+				</div>
+				<!-- userImg -->
+				<div class="user">
+					<img src="/static/img/images/user.jpg">
+				</div>
+			</div>
+			
+			<!-- cards -->
+			<div class="cardBox">
+				<div class="card">
+					<div>
+						<div class="numbers">500</div>
+						<div class="cardName">Usuarios</div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="people-outline"></ion-icon>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">100</div>
+						<div class="cardName">Citas en Espera</div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="checkmark-outline"></ion-icon>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">20</div>
+						<div class="cardName">Citas del Dia</div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="checkmark-circle-outline"></ion-icon>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">5</div>
+						<div class="cardName">Citas Canceladas</div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="close-circle-outline"></ion-icon>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">25</div>
+						<div class="cardName">Total Citas Mes</div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="checkmark-done-circle-outline"></ion-icon>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">30</div>
+						<div class="cardName">Medicos </div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="medkit-outline"></ion-icon>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">300</div>
+						<div class="cardName">Observaciones</div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="clipboard-outline"></ion-icon>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">200</div>
+						<div class="cardName">Comentarios</div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Add Charts -->
+			<!-- <div class="graphBox">
+				<div class="box">
+					<canvas id="myChart"></canvas>
+				</div>
+				<div class="box">
+					<canvas id="earning"></canvas>
+				</div>
+			</div> -->
+
+			<div class="details">
+				<!-- order details list -->
+				<div class="recentOrders">
+					<div class="cardHeader">
+						<h2>Citas del Dia</h2>
+						<a href="#" class="btn">Ver Todos</a>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<td>Codigo</td>
+								<td>Sucursal</td>
+								<td>Fecha</td>
+								<td>Hora </td>
+								<td>Medico</td>
+								<td>Paciente</td>
+								<td>Stado</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>01234567</td>
+								<td>Cartagena</td>
+								<td>10/10/2021</td>
+								<td>8:00 am</td>
+								<td>Sutano de tal</td>
+								<td>Mengano de tal</td>
+								<td><span class="status delivered">En Espera</span></td>
+							</tr>
+							<tr>
+								<td>01234567</td>
+								<td>Cartagena</td>
+								<td>10/10/2021</td>
+								<td>8:00 am</td>
+								<td>Sutano de tal</td>
+								<td>Mengano de tal</td>
+								<td><span class="status pending">Atendico</span></td>
+							</tr>
+							<tr>
+								<td>01234567</td>
+								<td>Cartagena</td>
+								<td>10/10/2021</td>
+								<td>8:00 am</td>
+								<td>Sutano de tal</td>
+								<td>Mengano de tal</td>
+								<td><span class="status return">Cancelado</span></td>
+							</tr>
+							   <td>01234567</td>
+								<td>Cartagena</td>
+								<td>10/10/2021</td>
+								<td>8:00 am</td>
+								<td>Sutano de tal</td>
+								<td>Mengano de tal</td>
+								<td><span class="status delivered">En Espera</span></td>
+							</tr>
+							<tr>
+								<td>01234567</td>
+								<td>Cartagena</td>
+								<td>10/10/2021</td>
+								<td>8:00 am</td>
+								<td>Sutano de tal</td>
+								<td>Mengano de tal</td>
+								<td><span class="status pending">Atendido</span></td>
+							</tr>
+							<tr>
+								<td>01234567</td>
+								<td>Cartagena</td>
+								<td>10/10/2021</td>
+								<td>8:00 am</td>
+								<td>Sutano de tal</td>
+								<td>Mengano de tal</td>
+								<td><span class="status return">Cancelado</span></td>
+							</tr>
+							    <td>01234567</td>
+								<td>Cartagena</td>
+								<td>10/10/2021</td>
+								<td>8:00 am</td>
+								<td>Sutano de tal</td>
+								<td>Mengano de tal</td>
+								<td><span class="status delivered">En Espera</span></td>
+							</tr>
+							<tr>
+								<td>01234567</td>
+							    <td>Cartagena</td>
+								<td>10/10/2021</td>
+								<td>8:00 am</td>
+								<td>Sutano de tal</td>
+								<td>Mengano de tal</td>
+								<td><span class="status pending">Atendido</span></td>
+							</tr>
+							<tr>
+								<td>01234567</td>
+								<td>Cartagena</td>
+								<td>10/10/2021</td>
+								<td>8:00 am</td>
+								<td>Sutano de tal</td>
+								<td>Mengano de tal</td>
+								<td><span class="status return">Cancelado</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<!-- New Customers -->
+				<!-- <div class="recentCustomers">
+					<div class="cardHeader">
+						<h2>Usuarios Recientes</h2>
+					</div>
+					<table>
+						<tr>
+							<td width="60px"><div class="imgBx"><img src="/static/img/images/img1.jpg"></div></td>
+							<td><h4>David<br><span>Cartagena</span></h4></td>
+						</tr>
+						<tr>
+							<td><div class="imgBx"><img src="/static/img/images/img2.jpg"></div></td>
+							<td><h4>Pedro<br><span>Barranquilla</span></h4></td>
+						</tr>
+						<tr>
+							<td><div class="imgBx"><img src="/static/img/images/img3.jpg"></div></td>
+							<td><h4>Maria<br><span>Cali</span></h4></td>
+						</tr>
+						<tr>
+							<td><div class="imgBx"><img src="/static/img/images/img4.jpg"></div></td>
+							<td><h4>Daniela<br><span>Bogota</span></h4></td>
+						</tr>
+						<tr>
+							<td><div class="imgBx"><img src="/static/img/images/img5.jpg"></div></td>
+							<td><h4>Daniel<br><span>Bucaramanga</span></h4></td>
+						</tr>
+						<tr>
+							<td><div class="imgBx"><img src="/static/img/images/img6.jpg"></div></td>
+							<td><h4>Ashraf<br><span>Santa Marta</span></h4></td>
+						</tr>
+						<tr>
+							<td><div class="imgBx"><img src="/static/img/images/img7.jpg"></div></td>
+							<td><h4>Diana<br><span>Usa</span></h4></td>
+						</tr>
+						<tr>
+							<td><div class="imgBx"><img src="/static/img/images/img8.jpg"></div></td>
+							<td><h4>Amit<br><span>Mexico</span></h4></td>
+						</tr>
+
+					</table>
+				</div> -->
+
+
+			</div>
+
+		</div>
+	</div>
+
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+	<!-- <script src="/templates/my_chart.js"></script> -->
+	<script>
+		// MenuToggle
+		let toggle = document.querySelector('.toggle');
+		let navigation = document.querySelector('.navigation');
+		let main = document.querySelector('.main');
+
+		toggle.onclick = function(){
+			navigation.classList.toggle('active');
+			main.classList.toggle('active');
+		}
+
+		// add hovered class in selected list item
+		let list = document.querySelectorAll('.navigation li');
+		function activeLink(){
+			list.forEach((item) =>
+			item.classList.remove('hovered'));
+			this.classList.add('hovered');
+		}
+		list.forEach((item) => 
+		item.addEventListener('mouseover',activeLink));
+	</script>
+</body>
+</html>

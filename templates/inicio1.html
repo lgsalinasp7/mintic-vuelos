@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeropuerto Rafael Nuñez</title>
+</head>
+<body>
+    <h1>Pagina de inicio</h1>
+    <br>
+    {% if sesion_iniciada %}
+        <p>Bienvenido</p> 
+        <h1>Salir de Seccion</h1>
+    <form action="/salir" method="POST">
+        {{csrf_token }}
+
+        <input type="submit" value="Salir" name="" id="">
+    {% else %}
+    <p>para poder solicitar una cita debes iniciar Seccion:<a href="/ingreso">[click aqui]</a></p>
+    {% endif %}
+</body>
+</html>
