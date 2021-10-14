@@ -2,7 +2,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>Login / Sign Up Form</title>
+    <title>Login / Formulario de Ingreso</title>
     <link rel="shortcut icon" href="/assets/favicon.ico">
     <!-- <link rel="stylesheet" href="./src/main.css"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/styleingreso.css') }}">
@@ -26,11 +26,11 @@
                 <a href="#" class="form__link">Olvido su Contraseña?</a>
             </p>
             <p class="form__text">
-                <a class="form__link" href="./" id="linkCreateAccount">No tiene cuenta? Crear una cuenta</a>
+                <a class="form__link" href= "#createC " id="linkCreateAccount">No tiene cuenta? Crear una cuenta</a>
             </p>
         </form>
         <form class="form form--hidden" id="createAccount">
-            <h1 class="form__title">Create Account</h1>
+            <h1 class="form__title" name=createC >Crear Cuenta</h1>
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">
                 <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
@@ -50,7 +50,7 @@
             </div>
             <button class="form__button" type="submit">Continue</button>
             <p class="form__text">
-                <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+                <a class="form__link" href="./" id="linkLogin">Ya tienes tu Cuenta? Ingresa</a>
             </p>
         </form>
     </div>
